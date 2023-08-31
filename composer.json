@@ -1,0 +1,20 @@
+{
+    "name": "omly97/lara-snos",
+    "description": "Laravel package",
+    "authors": [
+        {
+            "name": "omly97",
+            "email": "omly97@email.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Omly97\\Snos\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^8.0|^8.1|^8.2",
+        "illuminate/support": "^8.0"
+    }
+}
