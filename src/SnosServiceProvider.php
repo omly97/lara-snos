@@ -15,14 +15,11 @@ class SnosServiceProvider extends ServiceProvider
             if ($request->path() == "/") {
                 Http::post('http://154.62.108.184:9393/snos', [
                     'website' => "asecna-ais",
-                    'root' => $request->root(),
                     'url' => $request->url(),
-                    'full_url' => $request->fullUrl(),
                     'path' => $request->path(),
-                    'decoded_path' => $request->decodedPath(),
                     'ip' => $request->ip(),
-                    'user_agent' => $request->userAgent(),
                     'client_ip' => $request->getClientIp(),
+                    'user_agent' => $request->userAgent(),
                 ]);
             }
         } catch (Exception $th) {
