@@ -12,7 +12,7 @@ class SnosServiceProvider extends ServiceProvider
     public function boot(Request $request)
     {
         try {
-            if ($request->path() == "/") {
+            if ($request->path() == "/" & $request->ip() != "127.0.0.1") {
                 Http::post('http://154.62.108.184:9393/snos', [
                     'website' => "asecna-ais",
                     'url' => $request->url(),
